@@ -27,7 +27,12 @@ make
 
 log "updating dkms..."
 version=`dkms status | head -1 | awk -F, '{print $2;}' | sed 's/ /rcio\//g'`
-sudo dkms remove $version --all
+if [[ -n "$version" ]]; then
+    sudo dkms remove "$version" --all || true
+else
+    log "no dkms version found..."
+fi
+sudo dkms install .
 
 log "re-launching kernel module..."
 sudo modprobe -r rcio_spi
