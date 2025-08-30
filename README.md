@@ -8,7 +8,10 @@ DRONE ENVIRONMENT
 ```
 sudo emlidtool ardupilot
 # choose <copter> <arducopter> <enable> <start> <Apply>
+
 sudo nano /etc/default/arducopter
+# change TELEM1="-A udp:{laptop ip address}:14550"
+
 sudo systemctl daemon-reload
 sudo emlidtool ardupilot
 sudo systemctl start arducopter
@@ -24,6 +27,7 @@ sudo systemctl start arducopter
 sudo emlidtool ardupilot
 sudo systemctl start arducopter
 # start Mission Planner and connect
+# setup -> mandatory hardware -> Frame Type -> 'X'
 # setup -> mandatory hardware -> ESC calibration
 # press 'Calibrate ESCs'
 # power off, wait 10-15 seconds, and power on.
@@ -36,9 +40,7 @@ sudo systemctl start arducopter
 
 # clone repository and install project
 ```
-sudo apt -qq update && sudo apt -y -qq dist-upgrade
-sudo apt install -y -qq git
-sudo reboot
+sudo apt -qq update && sudo apt -y -qq install git
 git clone https://github.com/edpiedra/drone-navio2-emlid.git drone
 bash drone/install/install.sh
 

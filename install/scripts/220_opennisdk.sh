@@ -6,7 +6,6 @@ source "$SCRIPTS_DIR/00_common.env"
 source "$SCRIPTS_DIR/00_lib.sh"
 
 OPENNISDK_INSTALL_FLAG="$LOG_DIR/opennisdk"
-ARM_VERSION="OpenNI-Linux-Arm-2.3.0.63"
 OPENNISDK_SOURCE="$REPO/sdks/$ARM_VERSION"
 
 log "checking to see if previous $SCRIPT_NAME install ran successfully..."
