@@ -2,8 +2,8 @@
 set -Eeuo pipefail
 
 SCRIPT_NAME=$(basename "$0")
-source "$MAIN_SCRIPTS_DIR/00_common.env"
-source "$MAIN_SCRIPTS_DIR/00_lib.sh"
+source "$SCRIPTS_DIR/00_common.env"
+source "$SCRIPTS_DIR/00_lib.sh"
 
 RCIO_GIT="git@github.com:emlid/rcio-dkms.git"
 

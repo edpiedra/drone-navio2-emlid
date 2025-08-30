@@ -2,8 +2,8 @@
 set -Eeuo pipefail
 
 SCRIPT_NAME=$(basename "$0")
-source "$MAIN_SCRIPTS_DIR/00_common.env"
-source "$MAIN_SCRIPTS_DIR/00_lib.sh"
+source "$SCRIPTS_DIR/00_common.env"
+source "$SCRIPTS_DIR/00_lib.sh"
 
 NAVIO2_GIT="https://github.com/emlid/Navio2.git"
 NAVIO2_PACKAGE_INSTALL_FLAG="$LOG_DIR/navio2-package"
