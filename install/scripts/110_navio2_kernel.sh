@@ -26,7 +26,7 @@ cd "$RCIO_REPO"
 make
 
 log "updating dkms..."
-sudo dkms remove rcio/4.2.4 --all || true
+sudo dkms remove rcio-1.0.0 --all || true
 sudo dkms install .
 
 log "re-launching kernel module..."
