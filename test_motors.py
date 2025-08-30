@@ -13,7 +13,7 @@ def pulse_to_ns(pulse_us):
 def test_motor(channel):
     pwm = navio2.pwm.PWM(channel)
     pwm.initialize()
-    pwm.set_period(int(1e9 / FREQ_HZ))  # in nanoseconds
+    pwm.set_period(FREQ_HZ)  # in nanoseconds
     pwm.enable()
     print(f"Motor {channel} → ON")
     pwm.set_duty_cycle(pulse_to_ns(PULSE_TEST))
