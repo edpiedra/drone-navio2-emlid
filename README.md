@@ -63,7 +63,7 @@ cat /sys/kernel/rcio/status/alive
 cd ~
 sudo /home/pi/openni/OpenNI-Linux-Arm-2.3.0.63/Samples/SimpleRead/Bin/Arm-Release/SimpleRead
 
-cd ~/drone-rpi3
+cd ~/drone
 source .venv/bin/activate
 python3 -m test-body-detector
 
