@@ -5,7 +5,8 @@ SCRIPT_NAME=$(basename "$0")
 source "$SCRIPTS_DIR/00_common.env"
 source "$SCRIPTS_DIR/00_lib.sh"
 
-RCIO_GIT="https://github.com/emlid/rcio-dkms.git"
+RCIO_REPO="rcio-dkms"
+RCIO_GIT="https://github.com/emlid/$RCIO_REPO.git"
 
 log "checking to see if previous install of $SCRIPT_NAME ran successfully..."
 if [ -f "$NAVIO2_KERNEL_INSTALL_FLAG" ]; then 
@@ -15,8 +16,13 @@ fi
 
 log "getting rcio-dkms source..."
 cd $HOME 
+
+if [ -d $RCIO_REPO ]; then 
+    rm -rf $RCIO_REPO 
+fi 
+
 git clone "$RCIO_GIT"
-cd rcio-dkms
+cd "$RCIO_REPO"
 make
 
 log "updating dkms..."
