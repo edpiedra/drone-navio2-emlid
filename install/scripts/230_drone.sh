@@ -15,7 +15,17 @@ if [ -f "$DRONE_INSTALL_FLAG" ]; then
 fi 
 
 log "cloning pymavlink..."
+cd $HOME 
+if [ -d "pymavlink" ]; then 
+    rm -rf "pymavlink"
+fi 
+
 git clone https://github.com/ArduPilot/pymavlink.git
+cd pymavlink
+mkdir -p message_definitions/v1.0
+cd message_definitions/v1.0
+wget https://raw.githubusercontent.com/mavlink/mavlink/master/message_definitions/v1.0/common.xml
+wget https://raw.githubusercontent.com/mavlink/mavlink/master/message_definitions/v1.0/ardupilotmega.xml
 
 log "installing system packages..."
 sudo apt-get install -y -qq python3-opencv python3-numpy 
