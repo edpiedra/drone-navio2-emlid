@@ -16,7 +16,7 @@ def test_motor(channel):
     pwm.set_period(FREQ_HZ)  # in nanoseconds
     pwm.enable()
     print(f"Motor {channel} → ON")
-    pwm.set_duty_cycle(pulse_to_ns(PULSE_TEST))
+    pwm.set_duty_cycle(PULSE_TEST)
     time.sleep(2)
     pwm.set_duty_cycle(0)
     pwm.disable()
