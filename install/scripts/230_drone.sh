@@ -24,7 +24,7 @@ git clone https://github.com/ArduPilot/pymavlink.git
 cd pymavlink
 mkdir -p message_definitions/
 git clone https://github.com/mavlink/mavlink.git tmp_mavlink
-mv tmp_mavlink/message_definitions/v1.0 v1.0
+mv tmp_mavlink/message_definitions/v1.0 message_definitions
 rm -rf tmp_mavlink
 
 log "installing system packages..."
