@@ -26,7 +26,7 @@ cd "$RCIO_REPO"
 make
 
 log "updating dkms..."
-sudo dkms remove rcio/4.2.4 --all
+sudo dkms remove rcio/4.2.4 --all || true
 sudo dkms install .
 
 log "re-launching kernel module..."
@@ -35,7 +35,7 @@ sudo insmod rcio_core.ko
 sudo insmod rcio_spi.ko
 
 log "adding Navio2 overlays..."
-sudo bash "$MAIN_SCRIPTS_DIR/910_navio2_overlays.sh"
+sudo bash "$SCRIPTS_DIR/910_navio2_overlays.sh"
 
 touch "$NAVIO2_KERNEL_INSTALL_FLAG"
 
