@@ -5,7 +5,7 @@ PWM_OUTPUTS = [0, 1, 2, 3]  # Channels 1–4
 FREQ_HZ = 50
 PULSE_MIN = 1000  # µs
 PULSE_MAX = 2000  # µs
-PULSE_TEST = 5  # µs (10–15% throttle)
+PULSE_TEST = 15  # µs (10–15% throttle)
 
 def pulse_to_ns(pulse_us):
     return pulse_us * 1000
