@@ -15,7 +15,7 @@ if [ -f "$NAVIO2_PACKAGE_INSTALL_FLAG" ]; then
 fi 
 
 log "installing system dependencies..."
-sudo apt-get install git cmake g++ python3 python3-pip screen -y -qq
+sudo apt-get install git cmake g++ python3 python3-pip python3-venv screen -y -qq
 
 log "cloning from $NAVIO2_GIT..."
 
