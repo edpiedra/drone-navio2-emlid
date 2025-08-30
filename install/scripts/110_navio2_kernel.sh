@@ -17,7 +17,7 @@ log "getting rcio-dkms source..."
 cd $HOME 
 git clone "$RCIO_GIT"
 cd rcio-dkms
-make distclean
+make
 
 log "updating dkms..."
 sudo dkms remove rcio/0.6.6 --all
