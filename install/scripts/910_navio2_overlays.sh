@@ -11,7 +11,7 @@ source "$SCRIPTS_DIR/00_lib.sh"
 BOOT_CONF="/boot/config.txt"
 STAMP="$(date +%Y%m%d-%H%M%S)"
 BACKUP="$BOOT_CONF.bak-${STAMP}"
-REPO_OVERLAYS_DIR="$REPO/overlays"
+REPO_OVERLAYS_DIR="/home/pi/$REPO/overlays"
 
 require_root
 
