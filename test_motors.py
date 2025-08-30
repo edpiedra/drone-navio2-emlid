@@ -1,4 +1,4 @@
-import navio.pwm
+import navio2.pwm
 import time
 
 PWM_OUTPUTS = [0, 1, 2, 3]  # Channels 1–4
