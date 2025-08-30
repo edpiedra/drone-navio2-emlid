@@ -29,7 +29,7 @@ wget https://raw.githubusercontent.com/mavlink/mavlink/master/message_definition
 
 log "installing system packages..."
 sudo apt-get install -y -qq python3-opencv python3-numpy 
-cd "$REPO"
+cd "$HOME/$REPO"
 
 if [ ! -d .venv ]; then 
     log "creating virtual environment..."
