@@ -26,7 +26,7 @@ cd "$RCIO_REPO"
 make
 
 log "updating dkms..."
-version=`dkms status | head -1 | awk -F, '{print $2;}' | sed 's/ /rcio\//g'`
+version=$(dkms status | head -1 | awk -F, '{print $2}' | sed 's/ /rcio\//g' || true)
 if [[ -n "$version" ]]; then
     log "removing dkms version $version..."
     sudo dkms remove "$version" --all || true
