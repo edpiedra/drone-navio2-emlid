@@ -28,7 +28,7 @@ if [ -f $DRONE_INSTALL_FLAG ]; then
 elif [ -f $NAVIO2_KERNEL_INSTALL_FLAG ]; then 
     log "post-navio2 kernel reboot tasks starting..."
 
-    for step in "$MAIN_SCRIPTS_DIR"/2[0-9][0-9]_*.sh; do 
+    for step in "$SCRIPTS_DIR"/2[0-9][0-9]_*.sh; do 
         run_step "$step"
     done 
 
@@ -37,7 +37,7 @@ elif [ -f $NAVIO2_KERNEL_INSTALL_FLAG ]; then
 elif [ -f $EXPANSION_INSTALL_FLAG ]; then
     log "post-filesystem reboot tasks starting..."
 
-    for step in "$MAIN_SCRIPTS_DIR"/1[0-9][0-9]_*.sh; do 
+    for step in "$SCRIPTS_DIR"/1[0-9][0-9]_*.sh; do 
         run_step "$step"
     done 
 else 

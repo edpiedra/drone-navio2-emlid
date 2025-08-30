@@ -9,7 +9,7 @@ log "updating system packages..."
 sudo apt-get update && sudo apt-get -y -qq dist-upgrade
 
 if [ ! -f "$EXPANSION_INSTALL_FLAG" ]; then
-    log "exanding filesystem..."
+    log "expanding filesystem..."
     sudo raspi-config --expand-rootfs
     touch "$EXPANSION_INSTALL_FLAG"
 
