@@ -40,7 +40,7 @@ set +u; source .venv/bin/activate; set -u
 python3 -m pip install "$NAVIO2_WHEEL"
 python3 -m pip install -r requirements.txt
 cd $HOME/pymavlink
-python3 -m pip install .
+python3 -m pip install . --no-use-pep517
 set +u; deactivate; set -u
 
 touch "$DRONE_INSTALL_FLAG"
