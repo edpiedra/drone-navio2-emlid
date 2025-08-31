@@ -26,6 +26,7 @@ mkdir -p message_definitions/
 git clone https://github.com/mavlink/mavlink.git tmp_mavlink
 mv tmp_mavlink/message_definitions/v1.0 message_definitions
 rm -rf tmp_mavlink
+mv pyproject.toml pyproject.toml.bak
 
 log "installing system packages..."
 sudo apt-get install -y -qq python3-opencv python3-numpy 
