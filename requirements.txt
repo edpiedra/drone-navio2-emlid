@@ -1,2 +1,2 @@
 openni==2.3.0
-#pymavlink==2.4.47
+#pymavlink==2.4.49
