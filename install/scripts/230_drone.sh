@@ -37,6 +37,7 @@ if [ ! -d .venv ]; then
 fi 
 
 set +u; source .venv/bin/activate; set -u
+pip install --upgrade pip setuptools wheel
 python3 -m pip install "$NAVIO2_WHEEL"
 python3 -m pip install -r requirements.txt
 cd $HOME/pymavlink
